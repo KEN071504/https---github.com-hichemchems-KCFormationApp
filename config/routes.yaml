@@ -1,0 +1,50 @@
+controllers:
+
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+ 
+
+home:
+  path: /
+  controller: App\Controller\HomeController::index
+  methods: [GET, POST]
+
+
+FAQ:
+  path: /FAQ
+  controller: App\Controller\FAQController::index
+  methods: [GET, POST]
+
+Formation:
+  path: /Formation
+  controller: App\Controller\FormationController::index
+  methods: [GET, POST]
+
+
+admin:
+  path: /admin
+  controller: App\Controller\Admin\DashboardController::index
+  methods: [GET, POST]
+
+app_login:
+  path: /login
+  controller: App\Controller\LoginController::login
+  methods: [GET, POST]
+
+reset_password:
+
+    path: /reset-password
+    controller: App\Controller\ResetPasswordController::resetPassword
+
+vich_uploader_document:
+    path: /uploads/documents/{documentName}
+    controller: App\Controller\DocumentController::serveDocument
+    methods: [GET]
+
+vich_uploader_file:
+    path: /download/{filename}
+    controller: App\Controller\VichUploaderController::serveFile
+    methods: [GET]

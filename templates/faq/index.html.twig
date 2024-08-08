@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FAQController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<section class="example-wrapper">
+
+<div class="imgFAQ">
+    <img src="{{ asset('image/FAQ.png') }}" alt="FAQ">
+</div> 
+</section>
+
+<div class="FAQ">
+
+<h3 class="faqTitle">Comment m'inscrire à une formation ?</h3>
+<p class="faqPara">Vous pouvez vous inscrire en ligne via notre site internet en suivant les étapes indiquées sur la page de chaque formation. Si vous avez besoin d’assistance, notre équipe est disponible pour vous aider par téléphone ou par email.</p>
+<h3 class="faqTitle">Quels sont les prérequis pour suivre une formation ?</h3>
+<p class="faqPara">Chaque formation a ses propres prérequis. Vous trouverez ces informations dans la description détaillée de chaque cours sur notre site. Si vous avez des doutes, notre équipe pédagogique est à votre disposition pour vous conseiller.</p>
+<h3 class="faqTitle">Proposez-vous des formations en distanciel et en présentiel ?</h3>
+<p class="faqPara">Oui, nous proposons des formations en distanciel et en présentiel afin de répondre aux besoins et aux contraintes de nos apprenants. Les modalités de chaque formation sont spécifiées dans leur description.</p>
+<h3 class="faqTitle">Comment se déroule le suivi des apprenants ?</h3>
+<p class="faqPara">Nous mettons un point d’honneur à accompagner nos apprenants tout au long de leur parcours. Nos formateurs sont disponibles pour répondre à vos questions et vous guider. Des évaluations régulières permettent de suivre vos progrès et d’adapter les contenus pédagogiques en conséquence.</p>
+<h3 class="faqTitle">Puis-je bénéficier d’un accompagnement personnalisé ?</h3>
+<p class="faqPara">Absolument. En tant que centre de formation à taille humaine, nous offrons un accompagnement personnalisé à chaque apprenant pour garantir une expérience d’apprentissage optimale.</p>
+<h3 class="faqTitle">Quels sont les avantages de la certification Qualiopi ?</h3>
+<p class="faqPara">La certification Qualiopi garantit la qualité de nos prestations de formation. Elle atteste de notre engagement à fournir des formations conformes aux exigences des financeurs publics et privés, et à offrir un service de haute qualité à nos apprenants.
+Si vous avez d'autres questions, n'hésitez pas à nous contacter. Nous sommes là pour vous aider</p>
+
+
+</div>
+{% endblock %}

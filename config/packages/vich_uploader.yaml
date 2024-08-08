@@ -1,0 +1,46 @@
+# VichUploader configuration
+vich_uploader:
+  db_driver: orm
+  mappings:
+    # Base configuration for all mappings
+    base_config: &base_config
+      uri_prefix: /uploads/documents
+      upload_destination: '%kernel.project_dir%/public/uploads/documents'
+      namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+      inject_on_load: true
+      delete_on_update: true
+      delete_on_remove: true
+
+    # Mappings for specific upload types
+    lecons:
+      <<: *base_config
+      uri_prefix: /uploads/lecons
+      upload_destination: '%kernel.project_dir%/public/uploads/lecons'
+
+    devoirs:
+      <<: *base_config
+      uri_prefix: /uploads/devoirs
+      upload_destination: '%kernel.project_dir%/public/uploads/devoirs'
+
+    deposer:
+      <<: *base_config
+      uri_prefix: /uploads/deposer
+      upload_destination: '%kernel.project_dir%/public/uploads/deposer'
+
+    aide_aux_devoirs:
+      <<: *base_config
+      uri_prefix: /uploads/aide_aux_devoirs
+      upload_destination: '%kernel.project_dir%/public/uploads/aide_aux_devoirs'
+
+    messages:
+      <<: *base_config
+      uri_prefix: /uploads/document
+      upload_destination: '%kernel.project_dir%/public/uploads/document'
+
+    user_document:
+      <<: *base_config
+      uri_prefix: /uploads/documents
+      upload_destination: '%kernel.project_dir%/public/uploads/documents'
+      ##validation:
+       ## mime_types: [application/pdf, application/msword]
+        ##max_size: 1024k

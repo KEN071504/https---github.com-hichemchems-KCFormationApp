@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Fichiers</h1>
+    <ul>
+        {% for file in files %}
+            <li>
+                <a href="{{ path('vich_uploader_file', { filename: file.filename }) }}">{{ file.filename }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    {% for file in entity.files %}
+    <p>{{ file.name }} ({{ file.file }})</p>
+    {% endfor %}
+    
+{% endblock %}
